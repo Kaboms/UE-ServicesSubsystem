@@ -42,10 +42,10 @@ class GAMEINSTANCESERVICES_API UServicesSubsystem : public UGameInstanceSubsyste
 public:
 	// Return singleton service by type
 	UFUNCTION(BlueprintCallable, Meta = (DeterminesOutputType = "ServiceClass"))
-	UServiceBase* GetService(TSubclassOf<UServiceBase> ServiceClass);
+	UPARAM(DisplayName = "Service") UServiceBase*  GetService(TSubclassOf<UServiceBase> ServiceClass);
 
 	UFUNCTION(BlueprintPure, DisplayName = "Get Service", Meta = (WorldContext = "WorldContextObject", DeterminesOutputType = "ServiceClass"))
-	static UServiceBase* K2_GetService(const UObject* WorldContextObject, TSubclassOf<UServiceBase> ServiceClass);
+	static UPARAM(DisplayName="Service") UServiceBase* K2_GetService(const UObject* WorldContextObject, TSubclassOf<UServiceBase> ServiceClass);
 
 	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
 

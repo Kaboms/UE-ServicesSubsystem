@@ -35,7 +35,13 @@ UServiceBase* UServicesSubsystem::GetService(TSubclassOf<UServiceBase> ServiceCl
 
 UServiceBase* UServicesSubsystem::K2_GetService(const UObject* WorldContextObject, TSubclassOf<UServiceBase> ServiceClass)
 {
-    return UGameplayStatics::GetGameInstance(WorldContextObject)->GetSubsystem<UServicesSubsystem>()->GetService(ServiceClass);
+    UServicesSubsystem* ServicesSubsystem = UGameplayStatics::GetGameInstance(WorldContextObject)->GetSubsystem<UServicesSubsystem>();
+    if (IsValid(ServicesSubsystem))
+    {
+        return ServicesSubsystem->GetService(ServiceClass);;
+    }
+
+    return nullptr;
 }
 
 void UServicesSubsystem::Initialize(FSubsystemCollectionBase& Collection)
