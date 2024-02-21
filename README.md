@@ -4,10 +4,6 @@ They can be implemented by C++ and Blueprints out of box easily. <br>
 <br>
 ![SaveLoadServiceShowcase](Docs/SaveLoadServiceShowcase.png)
 
-<br>
-Services useful to separate logic from GameInstance to their own classes.
-<br>
-
 Let's say you have SaveLoad System, Auth Logic and maybe some statistic methods and all this implemented at GameInstance class and it's grown over and over.<br>
 Separate their to own classes is a good practice. <br>
 You can choose GameInstanceSubsystem, and usualy it's enought.<br>
