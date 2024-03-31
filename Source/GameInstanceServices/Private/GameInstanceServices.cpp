@@ -11,7 +11,7 @@
 
 #define LOCTEXT_NAMESPACE "FGameInstanceServicesModule"
 
-IMPLEMENT_MODULE(FGameInstanceServicesModule, SharedLibrary)
+IMPLEMENT_MODULE(FGameInstanceServicesModule, GameInstanceServices)
 
 DEFINE_LOG_CATEGORY(LogGameInstanceServices)
 
