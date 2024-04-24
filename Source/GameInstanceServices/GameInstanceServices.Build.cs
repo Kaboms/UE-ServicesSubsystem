@@ -35,10 +35,7 @@ public class GameInstanceServices : ModuleRules
 			new string[]
 			{
 				"CoreUObject",
-				"Engine",
-				"Slate",
-				"SlateCore",
-				// ... add private dependencies that you statically link with here ...	
+				"Engine"
 			}
 			);
 		
